@@ -1,6 +1,4 @@
 
-
-
 function notify(message: { command: string, url: string, active: boolean }) {
     if (0) {
         // ブラウザの右下にポップアップウィンドウが３秒ほどあらわれる。
