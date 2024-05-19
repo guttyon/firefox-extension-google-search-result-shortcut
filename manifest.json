@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "google-search-result-shortcut",
+    "version": "1.0.2",
+  
+    "description": "Add shortcut keys to the google search results page so that search results can be easily selected and opened in a separate tab.",
+  
+    "icons": {
+      "48": "icons/gsrs-48.png"
+    },
+  "permissions": [
+    "https://www.google.com/search*",
+    "tabs"
+  ],
+    "content_scripts": [
+      {
+        "matches": ["https://www.google.com/search*"],
+        "js": ["content_scripts/add_shortcut.js"]
+      }
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false,
+      "type": "module"
+    }    
+  }
+  
